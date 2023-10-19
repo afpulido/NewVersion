@@ -1,4 +1,5 @@
 <?php 
+
 // Clase principal que arranca el código
 class Landing{
     public function __construct(){}

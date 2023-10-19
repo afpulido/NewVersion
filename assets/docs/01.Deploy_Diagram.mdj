@@ -62,7 +62,7 @@
 											"width": 180,
 											"height": 13,
 											"underline": true,
-											"text": "Cliente"
+											"text": "Customer"
 										},
 										{
 											"_type": "LabelView",
@@ -159,7 +159,7 @@
 											"width": 261,
 											"height": 13,
 											"underline": true,
-											"text": "Servidor de Apps"
+											"text": "App's Server"
 										},
 										{
 											"_type": "LabelView",
@@ -258,7 +258,7 @@
 											"width": 285,
 											"height": 13,
 											"underline": true,
-											"text": "Servidor de BBDD"
+											"text": "DBMS MySQL Server"
 										},
 										{
 											"_type": "LabelView",
@@ -361,7 +361,7 @@
 											"width": 107,
 											"height": 13,
 											"underline": true,
-											"text": "Navegador"
+											"text": "Search Engine"
 										},
 										{
 											"_type": "LabelView",
@@ -464,7 +464,7 @@
 											"width": 132.18359375,
 											"height": 13,
 											"underline": true,
-											"text": "Controladores"
+											"text": "Controllers"
 										},
 										{
 											"_type": "LabelView",
@@ -567,7 +567,7 @@
 											"width": 52.7236328125,
 											"height": 13,
 											"underline": true,
-											"text": "Modelos"
+											"text": "Models"
 										},
 										{
 											"_type": "LabelView",
@@ -667,10 +667,10 @@
 											"font": "Arial;13;1",
 											"left": 609,
 											"top": 271,
-											"width": 59,
+											"width": 75,
 											"height": 13,
 											"underline": true,
-											"text": "Vistas"
+											"text": "Views"
 										},
 										{
 											"_type": "LabelView",
@@ -703,7 +703,7 @@
 									"font": "Arial;13;0",
 									"left": 604,
 									"top": 264,
-									"width": 69,
+									"width": 85,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGLAnu27bQVuVM="
@@ -723,8 +723,8 @@
 							"containerChangeable": true,
 							"left": 584,
 							"top": 264,
-							"width": 89,
-							"height": 45,
+							"width": 105,
+							"height": 57,
 							"nameCompartment": {
 								"$ref": "AAAAAAGLAnu27bQUkq0="
 							}
@@ -773,7 +773,7 @@
 											"width": 132.18359375,
 											"height": 13,
 											"underline": true,
-											"text": "Base de datos"
+											"text": "Dbs"
 										},
 										{
 											"_type": "LabelView",
@@ -852,9 +852,9 @@
 										"$ref": "AAAAAAGLAn93zbRVnWE="
 									},
 									"font": "Arial;13;0",
-									"left": 335,
+									"left": 333,
 									"top": 147,
-									"width": 53.8408203125,
+									"width": 56.01171875,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -862,7 +862,7 @@
 										"$ref": "AAAAAAGLAn93zrRX/Ds="
 									},
 									"edgePosition": 1,
-									"text": "+Petición"
+									"text": "+Request"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -957,7 +957,7 @@
 										"$ref": "AAAAAAGLAn+2ubRpqz0="
 									},
 									"edgePosition": 1,
-									"text": "+Respuesta"
+									"text": "+Answer"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -1231,7 +1231,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 610,
+									"left": 612,
 									"top": 220,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1252,7 +1252,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 623,
+									"left": 625,
 									"top": 212,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1273,7 +1273,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 585,
+									"left": 587,
 									"top": 235,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -1292,7 +1292,7 @@
 								"$ref": "AAAAAAGLAnr7u7PYsNE="
 							},
 							"lineStyle": 1,
-							"points": "581:205;615:263",
+							"points": "582:205;618:263",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGLAoGaFbSjHkI="
@@ -1325,7 +1325,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 585,
+									"left": 587,
 									"top": 235,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1346,7 +1346,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 572,
+									"left": 574,
 									"top": 243,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -1367,7 +1367,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 610,
+									"left": 612,
 									"top": 220,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -1386,7 +1386,7 @@
 								"$ref": "AAAAAAGLAnu27bQTY40="
 							},
 							"lineStyle": 1,
-							"points": "615:263;581:205",
+							"points": "618:263;582:205",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGLAoHNFLS0f+c="
@@ -1629,9 +1629,9 @@
 							"font": "Arial;13;0",
 							"left": 592,
 							"top": 368,
-							"width": 60,
+							"width": 73,
 							"height": 25,
-							"text": "3306"
+							"text": "Port 3306"
 						},
 						{
 							"_type": "UMLTextView",
@@ -1666,11 +1666,11 @@
 								"$ref": "AAAAAAFF+qBtyKM79qY="
 							},
 							"font": "Arial;13;0",
-							"left": 616,
+							"left": 608,
 							"top": 288,
-							"width": 60,
-							"height": 25,
-							"text": "HTML"
+							"width": 105,
+							"height": 38,
+							"text": "HTML, PHP"
 						},
 						{
 							"_type": "UMLTextView",
@@ -1709,7 +1709,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Cliente",
+					"name": "Customer",
 					"ownedElements": [
 						{
 							"_type": "UMLLink",
@@ -1747,7 +1747,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Servidor de Apps",
+					"name": "App's Server",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1770,7 +1770,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Servidor de BBDD"
+					"name": "DBMS MySQL Server"
 				},
 				{
 					"_type": "UMLComponentInstance",
@@ -1778,7 +1778,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Navegador",
+					"name": "Search Engine",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1786,7 +1786,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGLAnq0c7O7DQA="
 							},
-							"name": "Petición",
+							"name": "Request",
 							"source": {
 								"$ref": "AAAAAAGLAnq0c7O7DQA="
 							},
@@ -1802,7 +1802,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Controladores",
+					"name": "Controllers",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1810,7 +1810,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGLAnr7urPWeJI="
 							},
-							"name": "Respuesta",
+							"name": "Answer",
 							"source": {
 								"$ref": "AAAAAAGLAnr7urPWeJI="
 							},
@@ -1852,7 +1852,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Modelos",
+					"name": "Models",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1876,7 +1876,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Vistas",
+					"name": "Views",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",
@@ -1899,7 +1899,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Base de datos",
+					"name": "Dbs",
 					"ownedElements": [
 						{
 							"_type": "UMLDependency",

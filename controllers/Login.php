@@ -1,4 +1,5 @@
 <?php 
+require_once "Models/User.php";
 class Login{
     public function __construct(){}
     public function main(){
@@ -9,11 +10,12 @@ class Login{
             require_once "views/company/footer.view.php";
         }
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
-            $user = $_POST['email'];
-            $password = $_POST['password'];
-            if ($user =="ofbohorquez1@misena.edu.co" && $password == 1234 ){
+            $user = new User($_POST['email'], $_POST['password']);
+            $user = $user->login();
+            print_r($user);
+            if ($user) {
                 header('Location:?c=Dashboard');
-            }else{
+                }else{
                 $message="*Invalid user or password";
                 require_once "views/company/header.view.php";
                 require_once "views/company/login.view.php";

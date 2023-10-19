@@ -1,4 +1,5 @@
 <?php
+require_once "models/DataBase.php"; 
 // Valida con la superglobal $_REQUEST que la variable 'c' no tenga ningún valor asignado por metodo get    
 if(!isset($_REQUEST['c'])){
     //Se incluye y ejecuta el archivo Landing.php dentro de la carpeta controllers    
