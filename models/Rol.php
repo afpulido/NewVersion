@@ -1,6 +1,6 @@
 <?php 
 class Rol{
-
+private $dbh;
 private $rolCode;
 private $rolName;
 private $rolDescription;
@@ -12,6 +12,7 @@ private $deletedDate;
 # Sobrecarga de Constructores
 public function __construct(){
     try {
+        $this->dbh = Database::connection();
         $a = func_get_args();
         $i = func_num_args();
         if (method_exists($this, $f = '__construct' . $i)) {
@@ -21,14 +22,10 @@ public function __construct(){
         die($e->getMessage());
     }
 }
-    public function __construct6($rolCode, $rolName, $rolDescription, 
-        $createdDate, $lastModification,$deletedDate = null){
+    public function __construct3($rolCode, $rolName, $rolDescription){
         $this->rolCode = $rolCode;
         $this->rolName = $rolName;
-        $this->rolName = $rolDescription;
-        $this->createdDate = $createdDate ? $createdDate : date('Y-m-d H:i:s');
-        $this->lastModification = $lastModification ? $lastModification : date('Y-m-d H:i:s');
-        $this->deletedDate = $deletedDate;
+        $this->rolDescription = $rolDescription;
 }
 public function setRolCode ($rolCode){
     $this->rolCode = $rolCode;
@@ -77,7 +74,92 @@ public function getDeletedDate() {
     return $this->deletedDate;
 }
 
+# 2da parte persistencia a la base de datos
 
+    // CU13-Register Rol
+    public function registerRol(){
+        try{
+            $sql = 'INSERT INTO roles(rol_id,name,description) VALUES(:rolCode,:rolName,:rolDescription)';
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->bindValue('rolCode',$this->getRolCode());
+            $stmt->bindValue('rolName',$this->getRolName());
+            $stmt->bindValue('rolDescription',$this->getRolDescription());
+            $stmt->execute();
+        }catch(Exception $e){
+            die($e->getMessage());
+    }
+    }
+    // CU14-Update Rol
+    public function updateRol(){
+        try{
+            $sql = 'UPDATE ROLES SET
+                        rol_id = :rolCode,
+                        name   = :rolName,
+                        description = :rolDescription
+                    WHERE rol_id = :rolCode';
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->bindValue('rolCode',$this->getRolCode());
+            $stmt->bindValue('rolName',$this->getRolName());
+            $stmt->bindValue('rolDescription',$this->getRolDescription());
+            $stmt->execute();
+        }catch(Exception $e){
+            die($e->getMessage());
+    }
+    }
+    // CU15-Change Rol Status
+
+    // CU16-Get Rol By Id
+    public function getRolById( $rol_id){
+        try{
+            $sql = 'SELECT * FROM ROLES 
+                        WHERE rol_id = :rolCode';
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->bindValue('rolCode',$rol_id);
+            $stmt->execute();
+            $rolDb = $stmt->fetch();
+            $rol = new Rol(
+                $rolDb['rol_id'],
+                $rolDb['name'],
+                $rolDb['description']
+            );
+            return $rol;
+        } 
+        catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
+    // CU17-Consult Roles
+    public function consultRoles(){
+        try{
+            $rolList = [];
+            $sql = 'SELECT * FROM roles';
+            $stmt = $this->dbh->query($sql);
+            foreach($stmt->fetchAll() as $rol){
+                $rolList[] = new Rol(
+                    $rol['rol_id'],
+                    $rol['name'],
+                    $rol['description']
+                );
+            }
+            return $rolList;
+            {
+    }
+        }catch(Exception $e){
+            die($e->getMessage());
+    }
+}
+    // CU18-Delete Rol
+    public function deleteRol($rol_id){
+        try{
+            $sql = 'DELETE FROM ROLES 
+                        WHERE rol_id = :rolCode';
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->bindValue('rolCode',$rol_id);
+            $stmt->execute();
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+    }
 }
 
 

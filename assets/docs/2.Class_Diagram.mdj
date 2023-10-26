@@ -2860,7 +2860,24 @@
 											"top": 1032,
 											"width": 230.17236328125,
 											"height": 13,
-											"text": "+registerInvoice(): void",
+											"text": "+registerInvoiceAutoservice(): void",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGLWE0fo5VHVuA=",
+											"_parent": {
+												"$ref": "AAAAAAGKIDphFcvDyjY="
+											},
+											"model": {
+												"$ref": "AAAAAAGLWE0fZpVEbeU="
+											},
+											"font": "Arial;13;0",
+											"left": 773,
+											"top": 1047,
+											"width": 230.17236328125,
+											"height": 13,
+											"text": "+registerInvoiceService(): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2874,7 +2891,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 773,
-											"top": 1047,
+											"top": 1062,
 											"width": 230.17236328125,
 											"height": 13,
 											"text": "+changeInvoiceState(int invoice_id): obj",
@@ -2891,7 +2908,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 773,
-											"top": 1062,
+											"top": 1077,
 											"width": 230.17236328125,
 											"height": 13,
 											"text": "+getInvoiceById(int invoice_id): obj",
@@ -2908,7 +2925,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 773,
-											"top": 1077,
+											"top": 1092,
 											"width": 230.17236328125,
 											"height": 13,
 											"text": "+showAllInvoice(): array",
@@ -2937,7 +2954,7 @@
 									"left": 768,
 									"top": 1027,
 									"width": 240.17236328125,
-									"height": 68
+									"height": 83
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -2977,7 +2994,7 @@
 							"left": 768,
 							"top": 904,
 							"width": 240.17236328125,
-							"height": 191,
+							"height": 206,
 							"nameCompartment": {
 								"$ref": "AAAAAAGKIDphFcu9Avg="
 							},
@@ -7558,13 +7575,32 @@
 							"_parent": {
 								"$ref": "AAAAAAGKIDphFcu6P5c="
 							},
-							"name": "registerInvoice",
+							"name": "registerInvoiceAutoservice",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
 									"_id": "AAAAAAGLD83PcbN7Ybk=",
 									"_parent": {
 										"$ref": "AAAAAAGLD82YErK3hss="
+									},
+									"type": "void",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGLWE0fZpVEbeU=",
+							"_parent": {
+								"$ref": "AAAAAAGKIDphFcu6P5c="
+							},
+							"name": "registerInvoiceService",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGLWE1cGJYIBg8=",
+									"_parent": {
+										"$ref": "AAAAAAGLWE0fZpVEbeU="
 									},
 									"type": "void",
 									"direction": "return"
@@ -8015,7 +8051,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGKIDrBPcwR/bI="
 							},
-							"name": "created_date"
+							"name": "created_date",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8023,7 +8060,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGKIDrBPcwR/bI="
 							},
-							"name": "last_modification"
+							"name": "last_modification",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -8031,7 +8069,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGKIDrBPcwR/bI="
 							},
-							"name": "deleted_date"
+							"name": "deleted_date",
+							"type": ""
 						}
 					],
 					"operations": [

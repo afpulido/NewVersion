@@ -187,9 +187,49 @@ class User{
         }else{
             return false;
         }
+   
     }
-
+    // CU03-Password Recovery
+    // CU04-Register User
+    public function registerUser(){
+        try{
+        $sql='INSERT INTO users(email,password) VALUES (:email,:password)';
+        $stmt = $this->dbh->prepare($sql);
+        $stmt->bindValue('email', $this->getEmail());
+        $stmt->bindValue('password', sha1($this->getPassword()));
+        $stmt->execute();
+        }catch(PDOException $e){
+            die($e->getMessage());}
+        }
+    // CU05-Update User
+    public function updateUser(){
+        try{
+            $sql= 'UPDATE users SET name = :userName,
+                        last_name = :lastName,
+                        adress = :adress, 
+                        password = :password,
+                        phone_number =:phoneNumber
+                    WHERE doc_id = :userId';
+            $stmt = $this->dbh->prepare($sql);
+            $stmt->bindValue('userName',$this->getName());
+            $stmt->bindValue('last_name', $this->getLastName());
+            $stmt->bindValue('adress', $this->getAddress());
+            $stmt->bindValue('password', sha1($this->getPassword()));
+            $stmt->bindValue('phoneNumber', $this->getPhoneNumber());
+            $stmt->bindValue('userId', $this->getDocument());
+            $stmt->execute();
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
     }
-      
+    // CU06-Change Profile Image 
+    // CU07-Delete Account
+    // CU08-Register Employee
+    // CU09-Show Employee By Id
+    // CU10-Show All Employees
+    // CU11-Change User Status
+    // CU12-Delete Employee
+    }
+    
 
 ?>
