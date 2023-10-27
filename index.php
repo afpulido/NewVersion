@@ -7,7 +7,7 @@ if(!isset($_REQUEST['c'])){
     require_once "controllers/Roles.php";
     // Se crea un objeto de la clase Landing y se ejecuta su metodo main()
     $controller = new Roles;
-    $controller->registerRoles();
+    $controller->deleteRoles();
 }else{
     // si la variable 'c' tiene como valor una clase esta se le asigna a la variable global $controller
     $controller = $_REQUEST['c'];
