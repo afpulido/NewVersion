@@ -16,13 +16,18 @@
             }
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $rol = new Rol(
-                    2,'Empleado','Empleado de RealShoes.'
+                    2,'Employee','Empleado de RealShoes.'
                 );
                 $rol->updateRol();
             }
         }
         // Change Rol Status 
         // Get Rol By Id
+        public function getRolesById(){
+            $rol = new Rol();
+            $rol = $rol->getRolById(1);
+            print_r($rol);
+        }
         // Consult Roles
         public function consultRoles(){
         $roles = new Rol();
@@ -31,7 +36,7 @@
         // Delete Rol
         public function deleteRoles(){
             $rol = new Rol();
-            $rol->deleteRol(3);
+            $rol->deleteRol(4);
         }
 }
 ?>

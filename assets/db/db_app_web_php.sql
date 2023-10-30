@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS db_app_web_php;
 -- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
@@ -39,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `db_app_web_php`.`Users` (
   `email` VARCHAR(45) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `profile_image` VARCHAR(255) NULL,
-  `adress` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NULL,
   `phone_number` INT NULL,
   `created_date` DATETIME NOT NULL DEFAULT current_timestamp,
   `last_modification` DATETIME NOT NULL DEFAULT current_timestamp,
